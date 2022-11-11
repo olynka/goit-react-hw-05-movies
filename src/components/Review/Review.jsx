@@ -23,7 +23,7 @@ const Review = () => {
                 <div>
                     {movieReview.map(({ author, content, id }) => {
                         return (
-                            <li>
+                            <li key={id}>
                                 <b>Author: {author}</b>
                                 <p>{content}</p>
                             </li>
