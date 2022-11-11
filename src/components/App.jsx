@@ -1,5 +1,5 @@
 import { Route, Routes,Navigate} from "react-router-dom";
-import { Link, Container, Header } from "App.styled";
+
 import { Movies } from "./pages/Movies";
 import { Home } from "./pages/Home";
 import MovieDetalies from "./pages/MovieDetails";

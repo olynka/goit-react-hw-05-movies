@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { getSearchMovie } from 'components/FetchApi';
+import { SearchContainer,SearchFormInput,SearchForm,SearchFormBtn  } from './Movies.styled';
 
 
 export const Movies = () => { 
@@ -35,9 +36,9 @@ const [movieList, setmovieList] = useState(null);
   };
      
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-             <input type="text"
+        <SearchContainer>
+            <SearchForm onSubmit={handleSubmit}>
+             <SearchFormInput type="text"
                 name="query"
                 onChange={handleChange}
                 autoComplete="off"
@@ -46,8 +47,8 @@ const [movieList, setmovieList] = useState(null);
                 placeholder="Enter a movie name"
             
               />
-                <button type="submit">Search</button>
-            </form>
+                <SearchFormBtn  type="submit"></SearchFormBtn >
+            </SearchForm>
               <>
       {movieList && (
         <ul>
@@ -66,7 +67,7 @@ const [movieList, setmovieList] = useState(null);
 
 
 
-        </div>
+        </SearchContainer>
     )
 
 }

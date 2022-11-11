@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-
-
 export const Header = styled.header`
   display: flex;
   align-items: center;
@@ -15,11 +13,6 @@ export const Header = styled.header`
   > nav {
     display: flex;
   }
-`;
-
-export const Logo = styled.p`
-  font-weight: 700;
-  margin: 0;
 `;
 
 export const Link = styled(NavLink)`
